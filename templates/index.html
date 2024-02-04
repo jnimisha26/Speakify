@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speakify - Convert your PDF to audio</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="../static/landing.css">
+  <link rel="shortcut icon" href="../static/logo.PNG" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="main">
+    <img src="../static/bg.png" alt="" class="bg">
+    <div class="right">
+        <form action="/process" method="POST" enctype="multipart/form-data">
+          <div class="upload">
+            <div class="urldiv">
+              <label for="url">Enter your URL</label>
+              <input type="url" class="url" id="url" name="url" placeholder="" />
+            </div>
+            <p class="p">OR</p>
+            <div class="pdf">
+              <label for="pdf_file">Upload your File</label>
+              <input type="file" class="file" name="input_file" />
+            </div>
+            <p class="type">(File type : Document or PDF )</p>
+          </div>
+          <div class="preference">
+
+            <div class="gender">
+              <label for="voice">Choose Gender of Voice</label>
+              <select id="voice" name="voice"> <!-- Make sure the name is "voice" -->
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+              </select>
+          </div>
+          <div class="speed">
+              <label for="speed">Choose Speed of Voice</label>
+              <select id="speed" name="speed"> <!-- Make sure the name is "speed" -->
+                <option value="1x">1.0x</option>
+                <option value="0.5x">0.5x</option>
+                  <option value="2x">2.0x</option>
+              </select>
+          </div>
+          </div>
+        <input type="submit" value="Convert">
+        <div class="play">
+        <audio controls>
+          <source src="{{ url_for('download_audio', audio_filename=audio_filename) }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="download"><a href="{{ url_for('download_audio', audio_filename=audio_filename) }}" download>
+               Download
+              </a></button>
+            </div>
+        </form>
+
+    </div>
+  </div>
+  <footer>
+    <hr class="footerdivider" />
+    <div class="foot-links">
+      <a href="#" class="footext">SERVICES</a>
+      <a href="#" class="footext">PRIVACY POLICY</a>
+      <a href="#" class="footext">TERMS</a>
+      <a href="#" class="footext">HELP</a>
+      <a href="#" class="footext">CONTACT US</a>
+    </div>
+    <div class="copy">
+      <p class="copyright">SPEAKIFY &copy; 2023.</p>
+    </div>
+  </footer>
+  <script type="py" src="/backend.py" config="./pyscript.json"></script>
+  
+</body>
+
+</html>

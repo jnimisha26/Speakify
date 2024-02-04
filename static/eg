@@ -1,0 +1,177 @@
+*{
+  overflow: hidden;
+}
+
+.bg{
+  width: 99vw;
+  height: 98vh;
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  left: 1vw;
+  top: 7vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 85vw;
+  height: 85vh;
+  border-width: 2px;
+  border-style: double;
+  margin: 0px 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* rightSide */
+/* .right{
+  position: absolute;
+  right: 26vw;
+  top: 9vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  border-width: 2px;
+  border-style: double;
+  margin: 0px 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* form */
+
+form {
+  border: blue;
+  border-style: double;
+  padding: 10px 60px;
+  height: 72vh;
+  /* width: 30vw; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+} 
+
+ input {
+    /* margin : 10px; */
+    background-color: white; 
+ } 
+
+ .upload{
+  display: flex;
+  flex-direction: column;
+   padding: 30px 12px;
+   margin: 10px;
+   /* height : 15vh; */
+   border: rgb(198, 196, 196);
+   border-style:solid;
+   width :25vw;
+   align-items: center;
+   /* height: 40vh; */
+}  
+
+select{
+  padding: 5px;
+}
+
+option {
+  padding: 10px;
+}
+
+.p {
+  text-align: center;
+}
+.type {
+  font-size: 13px;
+}
+
+input.file{
+  width: 14vw;
+}
+.speed{
+  margin: 10px;
+}
+.gender{
+  margin: 10px;
+}
+
+input[type="submit"] {
+  width: 85px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+cursor: pointer;
+
+}
+
+input[type="submit"]:hover {
+background-color: #3533cd; 
+  color: white; 
+}
+
+.download{
+  width: 85px;
+  border-radius: 10px;
+  padding: 10px;
+cursor: pointer;
+margin: 12px;
+background-color: white;
+margin: 20px;
+
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.download:hover {
+  background-color: #3533cd; 
+  }
+
+a:hover{
+  color: white;
+}
+
+  .play{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }  */
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
+}
+
+.footlinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footext {
+  text-decoration: none;
+  color: grey;
+  margin: 15px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.copyright {
+  margin: 10px;
+  font-size: 12px;
+  color: white;
+} 
